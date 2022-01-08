@@ -1,0 +1,7 @@
+{
+    "board": "arduino:avr:uno",
+    "programmer": "arduino:avrispmkii",
+    "output": "../ArduinoOutputRGB",
+    "port": "COM16",
+    "sketch": "5x5x5_RGB_LED_CUBE\\5x5x5_RGB_LED_CUBE.ino"
+}
