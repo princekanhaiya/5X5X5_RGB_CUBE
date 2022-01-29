@@ -27,14 +27,14 @@ byte rows[5] = {9, 5, 6, 7, 8};
 #define buzzer 4
 #define buzzerFreq 1000 //1kHz freq because crystal used in h/w is of 16MHz
 #define pcbTestLed A0
-#define totalCol 25
-#define totalRow 5
+#define TOTAL_COL 25
+#define TOTAL_ROW 5
 
 // defines variables
 long duration;
 int distance;
 
-volatile unsigned char cube[totalRow][totalRow];
+volatile unsigned char cube[TOTAL_ROW][TOTAL_ROW];
 volatile int current_rows = 0;
 int brightness = 0;    // how bright the LED is
 int fadeAmount = 5;
@@ -214,14 +214,14 @@ void loop() {
 //turn all off
 void turnEverythingOff() {
   sr.setAllLow();
-  for (int i = 0; i < totalRow; i++) {
+  for (int i = 0; i < TOTAL_ROW; i++) {
     digitalWrite(rows[i], 0);
   }
 }
 //turn all on
 void turnEverythingOn() {
   sr.setAllHigh();
-  for (int i = 0; i < totalRow; i++) {
+  for (int i = 0; i < TOTAL_ROW; i++) {
     digitalWrite(rows[i], 1);
   }
 }
